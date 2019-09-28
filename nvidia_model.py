@@ -42,6 +42,3 @@ class EndtoEnd:
 
         return model
 
-
-obj = EndtoEnd(1, Input(shape=(66,200,3)))
-obj.forward()
