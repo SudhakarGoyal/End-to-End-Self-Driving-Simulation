@@ -6,5 +6,5 @@ With Udacity's open source simulator available, I tried to implement Nvidia's En
 3 fully connected layers 
 
 Further steps
-1) Training the network for predicting speed, steering, brake and throttle
+1) Training the network for predicting steering and throttle together. Currently, I have 2 different models for steering and throttle prediction.
 2) Try using RNN on the extracted features and compute the steering values
