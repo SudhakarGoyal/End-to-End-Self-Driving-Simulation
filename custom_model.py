@@ -49,20 +49,20 @@ class EndtoEnd:
     def forward(self):
         x = Lambda(lambda x: x/127.5-1.0)(self.input)
 
-        x = self.convolution(x, 5, 16, strides_=2)
-        x = self.identity(x, [16, 24, 16], strides_=2)
+        x = self.convolution(x, 5, 24, strides_=2)
+        x = self.identity(x, [16, 16, 24], strides_=2)
 
-        x = self.convolution(x, 5, 16, strides_=2)
-        x = self.identity(x, [16, 32, 16], strides_=2)
+        x = self.convolution(x, 5, 32, strides_=2)
+        x = self.identity(x, [16, 16, 32], strides_=2)
 
-        x = self.convolution(x, 5, 16, strides_=2)
-        x = self.identity(x, [16, 48, 16], strides_=2)
+        x = self.convolution(x, 5, 48, strides_=2)
+        x = self.identity(x, [24, 24 , 48], strides_=2)
 
-        x = self.convolution(x, 3, 16, strides_=1)
-        x = self.identity(x, [16, 64, 16], strides_=1)
+        x = self.convolution(x, 3, 64, strides_=1)
+        x = self.identity(x, [32, 32, 64], strides_=1)
 
-        x = self.convolution(x, 3, 16, strides_=1)
-        x = self.identity(x, [16, 64, 16], strides_=1)
+        x = self.convolution(x, 3, 64, strides_=1)
+        x = self.identity(x, [32, 32, 64], strides_=1)
         x = Flatten()(x)
 
         output = self.fully_connected(x)
