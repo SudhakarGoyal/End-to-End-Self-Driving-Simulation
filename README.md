@@ -7,4 +7,5 @@ With Udacity's open source simulator available, I tried to implement Nvidia's En
 
 Further steps
 1) Training the network for predicting steering and throttle together. Currently, I have 2 different models for steering and throttle prediction.
-2) Try using RNN on the extracted features and compute the steering values
+2) Implement conditional Imitation Learning on CARLA
+3) Try using RNN on the extracted features and compute the steering values
